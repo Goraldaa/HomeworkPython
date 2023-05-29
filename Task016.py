@@ -2,14 +2,12 @@
 #Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. 
 #В последующих  строках записаны N целых чисел Ai. Последняя строка содержит число X
 
-a = int(input('Введите число кол-во цифр:'))
-numbers = []
-for i in range(a):
-    numbers.append(int(input("Введите число:")))
+n = int(input('Введите число кол-во чисел:'))
+numbers = [int(input("Введите число:")) for i in range(n)]
 print(numbers)
-num = int(input("Введите искомое число:"))
+x = int(input("Введите искомое число:"))
 count = 0
 for i in numbers:
-    if i == num:
+    if i == x:
         count +=1
-print(f"число {num} встречается {count} раз")
+print(f"число {x} встречается {count} раз")

@@ -1,16 +1,14 @@
 #Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. 
 #Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. 
 #5В последующих  строках записаны N целых чисел Ai. Последняя строка содержит число X
-a = int(input('Введите число кол-во цифр:'))
-numbers = []
-for i in range(a):
-    numbers.append(int(input("Введите число:")))
+n = int(input('Введите число кол-во цифр:'))
+numbers = [int(input("Введите число:")) for i in range(n)]
 print(numbers)
-num = int(input("Введите любое число:"))
-difference = abs(numbers[0] - num)
+x = int(input("Введите любое число:"))
+difference = abs(numbers[0] - x)
 result = numbers[0]
 for i in numbers:
-    if abs(i - num) < difference:
-        difference = abs(i - num)
+    if abs(i - x) < difference:
+        difference = abs(i - x)
         result = i
-print(f"ближе всего к числу {num} в последовательности находится число {result}")
+print(f"Ближе всего к числу {x} в последовательности находится число {result}")
